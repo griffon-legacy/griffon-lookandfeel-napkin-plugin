@@ -14,24 +14,15 @@
  * limitations under the License.
  */
 
+package griffon.lookandfeel.napkin
+
+import griffon.lookandfeel.AbstractLookAndFeelTestCase
+
 /**
  * @author Andres Almiray
  */
-class LookandfeelNapkinGriffonPlugin {
-    def version = 0.1
-    def griffonVersion = '0.3.2 > *'
-    def dependsOn = [lookandfeel: 0.1]
-    def toolkits = ['swing']
-    def license = 'Apache Software License 2.0'
-
-    def author = 'Andres Almiray'
-    def authorEmail = 'aalmiray@users.sourceforge.net'
-    def title = 'Napkin Swing Look & Feel'
-    def description = '''
-Napkin Swing Look & Feel.
-'''
-
-    // URL to the plugin's documentation
-    def documentation = 'http://griffon.codehaus.org/Lookandfeel+Napkin+Plugin'
+class NapkinLookAndFeelTests extends AbstractLookAndFeelTestCase {
+    void testNapkinNapkinLookAndFeel() {
+        setAndTestLookAndFeel('Napkin', 'Napkin')
+    }
 }
-
